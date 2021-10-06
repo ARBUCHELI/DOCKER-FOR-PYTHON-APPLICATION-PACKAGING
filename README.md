@@ -42,5 +42,27 @@ if __name__ == "__main__":
     ## stream logs to a file
     logging.basicConfig(filename='app.log',level=logging.DEBUG)
     
-    app.run(host='0.0.0.0', port=5000) # THIS PART IS VERY IMPORTANT
+    app.run(host='0.0.0.0', port=5000) # --------> THIS PART IS VERY IMPORTANT FOR A SUCCESSFUL DEPLOYMENT
 ```
+
+* Edit the dockerfile on this way:
+```
+FROM python:3.8
+LABEL maintainer="Katie Gamanji"
+
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+
+# command to run on container start
+
+EXPOSE 5000 # --------> THIS PART IS VERY IMPORTANT TOO FOR A SUCCESSFUL DEPLOYMENT
+
+CMD [ "python", "app.py" ] 
+```
+
+* THE LAST POINT TO TAKE INTO CONSIDERATION:
+
+Check what IP you got for DOCKER_HOST after running the above command(default is 192.168.99.100:2376)
+
+In browser type whatever IP you got for DOCKER_HOST along with port 5000 Ex: http://192.168.99.100:5000/
