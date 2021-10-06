@@ -2,13 +2,13 @@
 
 ## DOCKER COMMANDS:
 
-### (Don't forget to nativete to the directory that contains the app and the docker file):
-** docker build -t python-helloworld .
-**  docker images
-** docker run -d -p 5000:5000 python-helloworld
-** docker ps
-** docker tag python-helloworld rothwulf/python-helloworld:v1.0.0
-** docker push rothwulf/python-helloworld:v1.0.0
+### (Don't forget to nativate to the directory that contains the app and the docker file):
+* docker build -t python-helloworld .
+* docker images
+* docker run -d -p 5000:5000 python-helloworld
+* docker ps
+* docker tag python-helloworld rothwulf/python-helloworld:v1.0.0
+* docker push rothwulf/python-helloworld:v1.0.0
 
 ## IMPORTANT:
 
