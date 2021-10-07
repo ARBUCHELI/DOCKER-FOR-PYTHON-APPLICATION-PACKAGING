@@ -2,7 +2,7 @@
 
 ## DOCKER COMMANDS:
 
-### (Don't forget to nativate to the directory that contains the app and the docker file):
+### (Don't forget to navigate to the directory that contains the app and the docker file):
 * docker build -t python-helloworld .
 * docker images
 * docker run -d -p 5000:5000 python-helloworld
